@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/***********************共通設定************************/
+/*-------------------------------------------*/
+/* 問い合わせ                                  */
+/*-------------------------------------------*/
+h2 {
+  font-size: 16px;
+  line-height: 2;
+  /* 750以下  */ }
+  @media all and (max-width: 750px) {
+    h2 {
+      font-size: 13px; } }
+
+.contact_wrapper {
+  max-width: 1100px;
+  padding: 0 20px;
+  margin: 0 auto; }
+
+section {
+  padding: 30px 0 10px;
+  border-top: 1px solid #D9D9D9;
+  /* 1101以上  */ }
+  @media all and (min-width: 1101px) {
+    section {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+      align-items: baseline;
+      padding: 40px 0; } }
+  section h3 {
+    font-size: 16px;
+    text-align: left;
+    /* 1100以下  */
+    /* 1101以上  */ }
+    @media all and (max-width: 1100px) {
+      section h3 {
+        margin: 0 0 10px;
+        font-size: 14px; } }
+    @media all and (min-width: 1101px) {
+      section h3 {
+        width: 320px; } }
+    section h3 span {
+      background: #DD6060;
+      color: #fff;
+      font-size: 14px;
+      font-weight: normal;
+      padding: 2px 5px;
+      margin: 0 0 0 5px;
+      /* 1100以下  */ }
+      @media all and (max-width: 1100px) {
+        section h3 span {
+          font-size: 13px; } }
+    section h3 p {
+      font-size: 14px;
+      color: #DD6060;
+      font-weight: normal;
+      margin: 5px 0 0;
+      /* 1100以下  */ }
+      @media all and (max-width: 1100px) {
+        section h3 p {
+          font-size: 12px; } }
+  section input, section select, section textarea {
+    border: none;
+    background: #E2E2E2;
+    padding: 20px;
+    border-radius: 5px; }
+
+section.note {
+  display: block;
+  border-top: none; }
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: left;
+  font-size: 13px;
+  /* 1101以上  */ }
+  @media all and (min-width: 1101px) {
+    .form {
+      font-size: 15px;
+      width: calc(100% - 320px); } }
+
+section.product {
+  border-top: 4px solid #DEDEDE; }
+  section.product li {
+    width: 50%;
+    margin: 10px 0;
+    /* 1101以上  */ }
+    @media all and (min-width: 1101px) {
+      section.product li {
+        width: 33%; } }
+    section.product li.w_full {
+      width: 100%; }
+
+section.product li, section.service li {
+  margin: 10px 0; }
+  section.product li input, section.service li input {
+    border: none;
+    background: #F1EBDC;
+    border-radius: 4px;
+    padding: 3px; }
+
+section.service li {
+  width: 50%;
+  /* 1101以上  */ }
+  @media all and (min-width: 1101px) {
+    section.service li {
+      width: 33%; } }
+  section.service li.w_full {
+    width: 100%; }
+  section.service li.dtp_list {
+    width: 100%;
+    position: relative; }
+    section.service li.dtp_list::after {
+      content: "";
+      background-image: url(../images/contact/icon_accordion.png);
+      background-size: cover;
+      position: absolute;
+      width: 8px;
+      height: 5px;
+      left: 100px;
+      top: 9px;
+      pointer-events: none;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+    section.service li.dtp_list.checked::after {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
+    section.service li.dtp_list label {
+      padding: 4px 30px 0 30px; }
+
+.input_text {
+  width: 300px;
+  /* 750以下  */ }
+  @media all and (max-width: 750px) {
+    .input_text {
+      width: 165px; } }
+
+.w_mid {
+  width: 70%;
+  /* 750以下  */ }
+  @media all and (max-width: 750px) {
+    .w_mid {
+      width: 100%; } }
+
+.accordion {
+  display: none;
+  padding: 10px 0; }
+  .accordion ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .accordion ul li {
+      margin: 5px 0;
+      width: 50%; }
+      .accordion ul li input {
+        width: 30%; }
+      .accordion ul li.else_dtp {
+        /* 1100以下  */ }
+        @media all and (max-width: 1100px) {
+          .accordion ul li.else_dtp {
+            width: 100%; } }
+
+section.group input, section.department input {
+  width: 100%; }
+
+section.bring li {
+  width: 50%;
+  margin: 10px 0;
+  /* 500以下  */
+  /* 1101以上  */ }
+  @media all and (max-width: 500px) {
+    section.bring li.event {
+      width: 60%; } }
+  @media all and (min-width: 1101px) {
+    section.bring li {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      margin: 0 60px 0 0; } }
+
+section.agree {
+  display: block;
+  margin: 40px 0 100px;
+  border-top: 4px solid #DEDEDE;
+  /* 1100以下  */ }
+  @media all and (max-width: 1100px) {
+    section.agree {
+      margin: 0px 0 20px; } }
+
+.agree_text {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2;
+  /* 1100以下  */ }
+  @media all and (max-width: 1100px) {
+    .agree_text {
+      font-size: 14px; } }
+  .agree_text a {
+    color: #6E5640;
+    text-decoration: underline; }
+
+.agree_check {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 30px 0 60px; }
+  .agree_check [type="checkbox"]:not(:checked) + label,
+  .agree_check [type="checkbox"]:checked + label {
+    padding: 6px 0 0 40px; }
+
+/*-------------------------------------------*/
+/* チェックボックスのデザイン変更                 */
+/*-------------------------------------------*/
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: 0;
+  opacity: 0.01; }
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  cursor: pointer;
+  padding: 4px 0 0 30px; }
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background: #E2E2E2;
+  -webkit-transition: all .275s;
+  -o-transition: all .275s;
+  transition: all .275s; }
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '';
+  background-image: url(../images/contact/icon_check.png);
+  width: 14px;
+  height: 12px;
+  position: absolute;
+  background-size: cover;
+  left: 4px;
+  top: 5px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+
+/*--------------------同意するのチェックボックス----------------*/
+section.agree {
+  /* checkbox aspect */
+  /* checked mark aspect */ }
+  section.agree [type="checkbox"]:not(:checked) + label:before,
+  section.agree [type="checkbox"]:checked + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: #E2E2E2;
+    border-radius: 100px;
+    -webkit-transition: all .275s;
+    -o-transition: all .275s;
+    transition: all .275s; }
+  section.agree [type="checkbox"]:not(:checked) + label:after,
+  section.agree [type="checkbox"]:checked + label:after {
+    content: '';
+    background: #6E5640;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+
+/*--------------------同意するのチェックボックス----------------*/
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(45deg);
+  -ms-transform: scale(0) rotate(45deg);
+  transform: scale(0) rotate(45deg); }
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0);
+  -ms-transform: scale(1) rotate(0);
+  transform: scale(1) rotate(0); }
+
+/* Disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #e9e9e9; }
+
+[type="checkbox"]:disabled:checked + label:after {
+  color: #777; }
+
+[type="checkbox"]:disabled + label {
+  color: #aaa; }

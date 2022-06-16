@@ -1,0 +1,412 @@
+@charset "utf-8";
+@import "_mixin";
+@import "_header";
+@import "_footer";
+
+
+/*-------------------------------------------*/
+/* COMMON(サイト基本設定)                      */
+/*-------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-style: normal;
+  }
+
+  body {
+    /* for iOS */
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
+  img {
+    /* for Chrome */
+    -webkit-backface-visibility: hidden;
+  }
+
+  body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    width:100%;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0px;
+    @include mediaSP{
+      font-size: 12px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+  }
+
+  section {
+    display: block;
+  }
+
+  a {
+    outline: none;
+    text-decoration: none;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  img {
+    width :100%;
+    height: auto;
+    vertical-align: top;
+  }
+
+  a img  {
+    border: none;
+  }
+
+  ul,li {
+    list-style: none;
+  }
+
+  input,label,select,textarea {
+    vertical-align: middle;
+  }
+
+  @include mediaSP {
+    html,
+    body {
+      height: auto;
+      overflow-x: hidden;
+    }
+  }
+  @include mediaPC {
+    html,
+    body {
+      height: 100%;
+    }
+    body {
+      min-height:100%;
+      height:auto !important;
+    }
+  }
+
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  .br_pc {
+    display: inline;
+    @include mediaSP{
+      display: none;
+    }
+  }
+  .br_sp {
+    display: none;
+    @include mediaSP{
+      display: inline;
+    }
+  }
+
+/*----------------------------------------------------
+サブページ共通
+----------------------------------------------------*/
+.title_bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 230px;
+  background-color: #F1EBDC;
+  @include mediaSP{
+    height: 160px;
+  }
+}
+.pagetitle {
+  color: #8E765E;
+}
+.pagetitle span {
+  display:block;
+  margin-bottom: 10px;
+  font-family: Futura,Trebuchet MS,Arial,sans-serif;
+  font-size: 20px;
+  @include mediaSP{
+    font-size: 15px;
+
+  }
+}
+.pagetitle h1 {
+  font-size: 40px;
+  font-weight: bold;
+  @include mediaSP{
+    font-size: 26px;
+  }
+}
+/*----------------------------------------------------
+料金
+----------------------------------------------------*/
+.price_wrapper{
+  max-width: 920px;
+  padding: 0 20px;
+  margin: 70px auto 80px auto;
+  @include mediaSP{
+    margin: 40px auto 70px auto;
+  }
+}
+.price_wrapper h2 {
+  margin-bottom: 60px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  line-height: 75px;
+  background-color: #6E5640;
+  color: #fff;
+  @include mediaSP{
+    margin-bottom: 30px;
+    font-size: 17px;
+    line-height: 56px;
+  }
+}
+.price_about {
+  margin-bottom: 110px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.87em;
+  color: #1A1311;
+  @include mediaSP{
+    margin-bottom: 77px;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 2em;
+  }
+}
+.price_about p:not(:last-child) {
+  margin-bottom: 35px;
+}
+.pricelist {
+  margin-top: 70px;
+  @include mediaSP{
+    margin-top: 50px;
+  }
+}
+.pricelist h3 {
+  margin-bottom: 30px;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  @include mediaSP{
+    font-size: 20px;
+  }
+}
+.pricelist p {
+  margin-bottom: 30px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4B4B4B;
+  @include mediaSP{
+    font-size: 13px;
+    line-height: 1.85em;
+  }
+}
+.price_menu {
+  display: flex;
+  align-items: stretch;
+  min-height: 100px;
+  margin-bottom: 20px;
+  @include mediaSP{
+    flex-flow: column;
+  }
+}
+.price_type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 144px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  @include mediaSP{
+    width: 100%;
+    height: 38px;
+    font-size: 14px;
+  }
+}
+.price {
+  display: flex;
+  align-items: center;
+  margin-left: 33px;
+  width: 317px;
+  text-align: left;
+  line-height: 1.2;
+  color: #1A1311;
+  @include mediaSP{
+    align-items: start;
+    margin: 25px 0 15px 22px;
+    width: calc(100% - 22px);
+  }
+}
+.price_text {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-bottom: 5px;
+}
+.price_detail {
+  display: flex;
+  align-items: center;
+  margin: 35px 35px 35px 0px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #4B4B4B;
+  flex: 1;
+  @include mediaSP{
+    margin: 0 22px 28px 22px;
+    font-size: 13px;
+  }
+}
+.joint {
+  flex: 1;
+}
+.col {
+  display: flex;
+  @include mediaSP{
+    flex-flow: column;
+  }
+}
+.col:not(:last-child){
+  border-bottom: 1px solid #B0CB40;
+}
+.annotation {
+  margin: 40px 0 70px 0;
+  color: #4B4B4B;
+  text-align: left;
+  @include mediaSP{
+    margin: 30px 0 80px 0;
+    font-size: 12px;
+    line-height: 1.83em;
+  }
+}
+// 文字装飾系
+.robo {
+  font-family: 'Roboto', sans-serif;
+}
+.mont {
+  font-family: 'Montserrat', sans-serif;
+}
+.bold {
+  font-weight: bold;
+}
+.large {
+  font-size: 32px;
+  @include mediaSP{
+    font-size: 36px;
+  }
+}
+.small {
+  font-size: 16px;
+}
+.blue h3 {
+  border-left: 10px solid #6E5640;
+}
+.blue .price_menu {
+  border: 1px solid #6E5640;
+}
+.blue .price_type {
+  background-color: #6E5640;
+}
+.blue .price_text {
+  color: #6E5640;
+}
+.sky h3 {
+  border-left: 10px solid #22A8AC;
+}
+.sky .price_menu {
+  border: 1px solid #22A8AC;
+}
+.sky .price_type {
+  background-color: #22A8AC;
+}
+.sky .price_text {
+  color: #22A8AC;
+}
+.green h3 {
+  border-left: 10px solid #B0CB40;
+}
+.green .price_menu {
+  border: 1px solid #B0CB40;
+}
+.green .price_type {
+  background-color: #B0CB40;
+}
+.green .price_text {
+  color: #B0CB40;
+}
+
+
+
+/*----------------------------------------------------
+プライバシーポリシー
+----------------------------------------------------*/
+.policy_wrapper{
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 80px auto 80px auto;
+  @include mediaSP{
+    margin: 50px auto 60px auto;
+  }
+}
+.privacypolicy {
+    margin-bottom: 60px;
+    text-align: left;
+    @include mediaSP{
+      margin-bottom: 37px;
+    }
+}
+.privacypolicy h2 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2.18em;
+    letter-spacing: 0.05em;
+    @include mediaSP{
+      font-size: 13px;
+      line-height: 2em;
+    }
+}
+.privacypolicy p {
+    line-height: 2.14em;
+    @include mediaSP{
+      line-height: 1.9em;
+    }
+}
+.button {
+    width: 300px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 auto;
+    background: #8E765E;
+    @include trans;
+      &:hover{
+        background: #6E5640;
+      }
+    @include mediaSP{
+      width: 335px;
+    }
+}
+.button a{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: #fff;
+    @include mediaSP{
+      font-size: 14px;
+    }
+}

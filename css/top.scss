@@ -1,0 +1,903 @@
+@charset "utf-8";
+@import "_mixin";
+
+/*-------------------------------------------*/
+/* キービジュアル                              */
+/*-------------------------------------------*/
+
+#kv_wrap{
+    background-image: url(../images/top/header_pc.jpg);
+    background-position: center;
+    height: 690px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    @include mediaSP{
+        background-image: url(../images/top/header_sp.jpg);
+        height: 324px;
+    }
+}
+.kv_info {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.kv{
+    margin-right: 0;
+    margin-left: auto;
+    max-width: 600px;
+    text-align: left;
+    padding: 145px 20px 0 0;
+    @include mediaSP{
+        max-width: 244px;
+        padding: 120px 0 0 0;
+        text-align: right;
+    }
+}
+
+.logo_icras {
+    width: 430px;
+    @include mediaSP{
+        width: 244px;
+    }
+}
+
+.kv_btn_wrap{
+    margin-top: 130px;
+    @include mediaSP{
+        display:none;
+    }
+}
+
+.catch {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    @include mediaSP{
+        font-size: 17px;
+        margin: 20px 0 15px;
+    }
+}
+
+.sub_catch {
+    font-size: 20px;
+    @include mediaSP{
+        font-size: 9px;
+    }
+}
+
+.kv_btn{
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    span{
+        a{
+            background: rgba(255, 255, 255, 0.5);
+            border: solid 1px rgba(0, 0, 0, 0.5);
+            display: block;
+            padding: 10px 10px 10px 50px;
+            margin: 0 15px;
+            color: #000;
+            font-weight: bold;
+            position: relative;
+            font-size: 20px;
+            width: 200px;
+            @include trans;
+            &:hover{
+                background: rgba(255, 255, 255, 1);
+                &::after{
+                    left: 32px;
+                }
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                background-image: url(../images/top/arr.png);
+                background-size: cover;
+                width: 21px;
+                height: 20px;
+                left: 22px;
+                top: 15px;
+                @include trans;
+            }
+        }
+    }
+}
+
+
+/*-------------------------------------------*/
+/* トップ                                     */
+/*-------------------------------------------*/
+
+section#pdca{
+    max-width: 1075px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    @include mediaSP{
+        padding: 33px 20px 50px;
+    }
+
+    h2{
+        font-size: 39px;
+        letter-spacing: 0.04em;
+        line-height: 1.56em;
+        color: #9E8972;
+        margin: 40px 0 50px;
+        @include mediaSP{
+            font-size: 22px;
+            margin: 0 0 20px;
+        }
+    }
+}
+
+.voice_img{
+    @include mediaSP{
+        margin: 0 calc(50% - 50vw) 50px calc(50% - 50vw);
+        width: 100vw;
+    }
+}
+
+.pdca_img{
+    max-width: 836px;
+    margin: 30px auto 15px;
+
+}
+
+.pdca_txt{
+    font-size: 16px;
+    font-weight: bold;
+    @include mediaSP{
+        margin-top: 22px;
+        font-size: 14px;
+    }
+}
+
+
+/*-------------------------------------------*/
+/* Manualdockとは                                  */
+/*-------------------------------------------*/
+
+section#about{
+    margin: 0 0 70px;
+    h2{
+        background: #F1EBDC;
+        padding: 10px;
+        @include mediaSP{
+            padding: 15px;
+        }
+        img{
+            max-width: 424px;
+            margin: 0 auto;
+            @include mediaSP{
+                max-width: 250px;
+            }
+        }
+    }
+}
+
+.about_wrap{
+    padding: 0 20px;
+}
+
+.about_txt{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 40px 0;
+    padding: 0 20px;
+    @include mediaSP{
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        line-height: 2.0em;
+        margin: 35px 0 0;
+        padding: 0;
+    }
+}
+
+.cloud_wrap{
+    max-width: 1015px;
+    margin: 20px auto;
+    border: 1px solid #9B8974;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    @include mediaSP{
+        font-size: 13px;
+        line-height: 1.85em;
+        margin: 40px auto;
+        padding: 35px 10px;
+    }
+}
+
+.cloud_img {
+    max-width: 750px;
+    margin: 30px auto;
+}
+
+.cloud_text{
+    p{
+        padding: 15px 0;
+        border-bottom: 1px solid #9B8974;
+        &:last-child{
+            border-bottom: none;
+            padding: 15px 0 0;
+        }
+        @include mediaSP{
+            padding: 25px 0;
+            &:first-child{
+                padding: 15px 0 25px;
+            }
+            &:last-child{
+                padding: 25px 0 0;
+            }
+        }
+    }
+}
+
+
+
+.phone {
+    max-width: 1055px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    @include mediaSMLLmin{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    @include mediaSMLLmax{
+        padding: 0;
+    }
+}
+
+
+.phone_img{
+    @include mediaSMLLmin{
+        width: 330px;
+    }
+    @include mediaSMLLmax{
+        width: 153px;
+        margin: 0 auto;
+    }
+}
+
+.phone_text {
+    text-align: left;
+    @include mediaSMLLmin{
+        width: calc(100% - 385px);
+    }
+    p{
+        color: #8E765E;
+        font-size: 22px;
+        margin: 40px 0 10px;
+        line-height: 1.4;
+        @include mediaSP{
+            font-size: 20px;
+            letter-spacing: 0.04em;
+            line-height: 1.8em;
+        }
+    }
+    span{
+        font-size: 16px;
+        @include mediaSP{
+            font-size: 14px;
+            letter-spacing: 0.03em;
+            line-height: 1.8em;
+        }
+    }
+}
+
+.pcchart {
+    max-width: 1075px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    @include mediaSMLLmin{
+        display: flex;
+        justify-content: space-between;
+    }
+    @include mediaSMLLmax{
+        flex-wrap: wrap-reverse;
+    }
+}
+
+.pc_text_wrap {
+    text-align: left;
+    @include mediaSMLLmin{
+        width: 600px;
+    }
+}
+
+.pc_text{
+    padding: 15px;
+    border: solid 1px #A99A88;
+    font-size: 16px;
+    margin: 0 0 25px;
+    font-weight: bold;
+    @include mediaSP{
+        padding: 20px 5px;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+    dt{
+        background: #A99A88;
+        color: #fff;
+        margin: 20px 0 10px;
+        padding: 0px 5px;
+        font-size: 22px;
+        @include mediaSP{
+            font-size: 20px;
+        }
+    }
+    dd{
+        ul {
+            margin: 10px 0;
+            @include mediaSP{
+                margin-bottom: 18px;
+            }
+        }
+        span{
+            font-size: 14px;
+            @include mediaSP{
+                font-size: 12px;
+            }
+        }
+    }
+    li{
+        text-indent: -20px;
+        padding-left: 20px;
+        &::before{
+            content: "●";
+            color: #A99A88;
+        }
+    }
+    .sp_small {
+        font-size: 16px;
+        margin: 10px 0;
+        @include mediaSP{
+            font-size: 12px;
+            margin-top: 18px;
+        }
+    }
+}
+
+.pc_img{
+    position: relative;
+    @include mediaSMLLmax{
+        width: 100%;
+    }
+    img{
+        @include mediaSMLLmin{
+        position: absolute;
+        left: -450px;
+        top: -344px;
+        width: 840px;
+    }
+        @include mediaSMLLmax{
+            position: relative;
+            right: 0px;
+            top: -12px;
+            width: 440px;
+        }
+    }
+}
+
+
+
+.more_btn_wrap{
+    margin: 50px calc(50% - 50vw);
+    width: 100vw;
+    @include mediaSP{
+        margin-top: 10px;
+    }
+}
+
+.more_btn{
+
+    @include mediaPC{
+        display: flex;
+        justify-content: center;
+    }
+
+    span{
+        a{
+            background: rgba(255, 255, 255, 0.5);
+            border: solid 1px rgba(0, 0, 0, 0.5);
+            display: block;
+            padding: 5px 5px 5px 35px;
+            color: #000;
+            font-weight: bold;
+            position: relative;
+            font-size: 20px;
+            @include mediaPC{
+                padding: 10px 10px 10px 50px;
+
+                width: 310px;
+            }
+            @include trans;
+            &:hover{
+                background: rgba(255, 255, 255, 1);
+                &::after{
+                    left: 32px;
+                }
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                background-image: url(../images/top/arr.png);
+                background-size: cover;
+                width: 21px;
+                height: 20px;
+                left: 22px;
+                top: 15px;
+                @include trans;
+                @include mediaSP{
+                    left: 8px;
+                    top: 10px;
+                }
+            }
+            @include mediaSP{
+                font-size: 20px;
+            }
+        }
+        &.rigth_margin{
+            a{
+                margin: 0 15px 0 0px;
+                @include mediaSP{
+                    margin: 0 0 15px 0;
+                }
+            }
+        }
+    }
+    .btn_l_wrap{
+        display: flex;
+        @include mediaPC{
+            width: 50%;
+        }
+        @include mediaSP{
+            span{
+                width: 70%;
+            }
+        }
+
+    }
+    .btn_r_wrap{
+        display: flex;
+        @include mediaPC{
+            width: 50%;
+        }
+        @include mediaSP{
+            justify-content: flex-end;
+            span{
+                width: 70%;
+            }
+        }
+    }
+    .btn_l{
+        border-top: solid 1px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        @include mediaSP{
+            width: 15%;
+
+        }
+    }
+    .btn_r{
+        border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        @include mediaSP{
+            width: 15%;
+        }
+    }
+
+}
+
+
+
+/*-------------------------------------------*/
+/* こんな使い方ができます                       */
+/*-------------------------------------------*/
+
+
+section#howto {
+    h2 {
+        margin: 30px 0 0;
+        background: #F1EBDC;
+        padding: 10px;
+        font-size: 39px;
+        color: #A99A88;
+        @include mediaSP{
+            height: 92px;
+            line-height: 92px;
+            padding: 0;
+            font-size: 22px;
+        }
+    }
+    li{
+        text-indent: -20px;
+        padding-left: 20px;
+        font-size: 16px;
+        @include mediaSP{
+            font-size: 14px;
+        }
+
+        &::before{
+            content: "●";
+            color: #A99A88;
+        }
+    }
+}
+.howto_wrap{
+    padding: 20px;
+}
+
+.how_text{
+    max-width: 550px;
+    margin: 20px auto;
+    text-align: left;
+    font-weight: bold;
+    p{
+        margin: 10px 0;
+        font-size: 12px;
+        @include mediaSP{
+            margin: 30px 0;
+        }
+    }
+
+    li{
+        font-size: 20px;
+        @include mediaSP{
+            font-size: 17px;
+            letter-spacing: 0.05em;
+            line-height: 2em;
+        }
+    }
+}
+
+
+
+.howto_set {
+    max-width: 1015px;
+    margin: 20px auto 30px;
+    border: 1px solid #9B8974;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    background-repeat: no-repeat;
+    @include mediaSP{
+        margin: 20px auto 0px;
+    }
+
+    &.one{
+        background-image: url(../images/top/howto_bg1.jpg);
+        background-size: 54%;
+        background-position: 92% 88%;
+        @include mediaSP{
+            background-size: 52%;
+            background-position: 81% 90%;
+        }
+        @include mediaSMLSmax{
+            background-size: 68%;
+            background-position: 67% 95%;
+        }
+    }
+    &.two{
+        background-image: url(../images/top/howto_bg2.jpg);
+        background-size: 70%;
+        background-position: 71% 70%;
+        @include mediaSP{
+            background-size: 60%;
+            background-position: 88% 90%;
+        }
+        @include mediaSMLSmax{
+            background-size: 76%;
+            background-position: 81% 91%;
+        }
+    }
+    &.three{
+        background-image: url(../images/top/howto_bg3.jpg);
+        background-size: 69%;
+        background-position: 67% 70%;
+        @include mediaSP{
+            background-size: 59%;
+            background-position: 84% 94%;
+        }
+        @include mediaSMLSmax{
+            background-size: 75%;
+            background-position: 77% 92%;
+        }
+    }
+    &.four{
+        background-image: url(../images/top/howto_bg4.jpg);
+        background-size: 65%;
+        background-position: 80% 69%;
+        @include mediaSP{
+            background-size: 60%;
+            background-position: 88% 90%;
+        }
+        @include mediaSMLSmax{
+            background-size: 73%;
+            background-position: 74% 94%;
+        }
+    }
+    &.five{
+        background-image: url(../images/top/howto_bg5.jpg);
+        background-size: 79%;
+        background-position: 74% 69%;
+        @include mediaSP{
+            background-size: 62%;
+            background-position: 83% 90%;
+        }
+        @include mediaSMLSmax{
+            background-size: 78%;
+            background-position: 74% 94%;
+        }
+    }
+    &.six{
+        background-image: url(../images/top/howto_bg6.jpg);
+        background-size: 76%;
+        background-position: 74% 66%;
+        @include mediaSP{
+            background-size: 59%;
+            background-position: 83% 90%;
+            margin-bottom: 50px;
+        }
+        @include mediaSMLSmax{
+            background-size: 76%;
+            background-position: 74% 91%;
+        }
+    }
+
+}
+.howto_num{
+    background: #F1EBDC;
+    border-radius: 10px 0px 0 10px;
+    width: 100px;
+    font-size: 90px;
+    font-family: 'Oswald', sans-serif;
+    color: #A99A88;
+    &.six{
+        background: #F9E0DF;
+    }
+    @include mediaSP{
+        font-size: 50px;
+        width: 44px;
+    }
+}
+
+.howto_info {
+    text-align: left;
+    @include mediaSP{
+        width: calc(100% - 44px);
+    }
+    &.one{
+        padding: 20px 20px 360px 20px;
+        @include mediaSP{
+            padding: 15px 15px 200px 15px;
+        }
+    }
+    &.two{
+        padding: 20px 20px 450px 20px;
+        @include mediaSP{
+            padding: 15px 15px 210px 15px;
+        }
+    }
+    &.three{
+        padding: 20px 20px 520px 20px;
+        @include mediaSP{
+            padding: 15px 15px 220px 15px;
+        }
+    }
+    &.four{
+        padding: 20px 20px 540px 20px;
+        @include mediaSP{
+            padding: 15px 15px 230px 15px;
+        }
+        }
+    &.five{
+        padding: 20px 20px 570px 20px;
+        @include mediaSP{
+            padding: 15px 15px 220px 15px;
+        }
+    }
+    &.six{
+        padding: 20px 20px 530px 20px;
+        @include mediaSP{
+            padding: 15px 15px 260px 15px;
+        }
+    }
+}
+
+.howto_tit {
+    font-size: 22px;
+    color: #A99A88;
+    font-weight: bold;
+    @include mediaSP{
+        font-size: 20px;
+    }
+    span{
+        font-size: 16px;
+        color: #000;
+        display: block;
+        margin: 10px 0 0 0;
+        @include mediaSP{
+            font-size: 14px;
+        }
+    }
+}
+
+.howto_plan{
+    display: flex;
+
+    align-items: flex-start;
+    @include mediaPC{
+        position: absolute;
+        left: 0px;
+        bottom: 10px;
+    }
+    @include mediaSP{
+        position: relative;
+        left: -57px;
+        top: 20px;
+    }
+}
+
+.plan_line{
+    border-bottom: 1px solid #9B8974;
+    width: 120px;
+    position: relative;
+    bottom: -29px;
+    @include mediaSP{
+        width: 60px;
+        bottom: -26px;
+    }
+}
+
+.plan_text{
+    p{
+        background-color: rgba(255,255,255,0.7);
+        border: 1px solid #9B8974;
+        padding: 2px 10px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        @include mediaSP{
+            font-size: 14px;
+        }
+    }
+    ul{
+        margin: 10px 0;
+        li{
+            @include mediaSP{
+                font-size: 12px;
+            }
+        }
+    }
+
+}
+
+
+/*-------------------------------------------*/
+/* 他社ツールとの違い                           */
+/*-------------------------------------------*/
+
+section#compare {
+    h2 {
+        background: #F1EBDC;
+        padding: 10px;
+        font-size: 39px;
+        color: #A99A88;
+        @include mediaSP{
+            height: 92px;
+            line-height: 92px;
+            padding: 0;
+            font-size: 22px;
+        }
+    }
+}
+
+.compare_img {
+    @include mediaSP{
+        display: none;
+    }
+    max-width: 1020px;
+    margin: 70px auto;
+}
+
+.compare_info {
+    padding: 37px 20px 43px 20px;
+    @include mediaPC{
+        display: none;
+    }
+}
+.compare_logo {
+    margin: 0 auto 37px auto;
+    width: 278px;
+}
+.compare_info ul li {
+    display: flex;
+    align-items: stretch;
+}
+.compare_num {
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+    color: #fff;
+}
+.compare_one .compare_num {
+  background-color: #36B7A8;
+}
+.compare_two .compare_num {
+    background-color: #F39800;
+}
+.compare_three .compare_num {
+    background-color: #87BA24;
+}
+.compare_four .compare_num {
+    background-color: #70AFD9;
+}
+.compare_five .compare_num {
+    background-color: #D3778C;
+}
+.tri{
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    margin: auto;
+}
+.compare_one .tri {
+    border-left: 5px solid #36B7A8;
+}
+.compare_two .tri {
+    border-left: 5px solid #F39800;
+}
+.compare_three .tri {
+    border-left: 5px solid #87BA24;
+}
+.compare_four .tri {
+    border-left: 5px solid #70AFD9;
+}
+.compare_five .tri {
+    border-left: 5px solid #D3778C;
+}
+.compare_text {
+    margin: 17px 0 17px 24px;
+    flex: 1;
+    text-align: left;
+}
+.compare_text h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    line-height: 1.25em;
+}
+.compare_one .compare_text h3 {
+    color: #36B7A8;
+}
+.compare_two .compare_text h3 {
+    color: #F39800;
+}
+.compare_three .compare_text h3 {
+    color: #87BA24;
+}
+.compare_four .compare_text h3 {
+    color: #70AFD9;
+}
+.compare_five .compare_text h3 {
+    color: #D3778C;
+}
+.compare_text p {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.compare_text li::before{
+        content: "●";
+}
+.compare_two ul {
+    margin-top: 20px;
+}

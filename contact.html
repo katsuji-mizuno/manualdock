@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO:headの情報 -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!--favicon-->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="128x128" href="images/favicon.png">
+
+    <!-- OGP: -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="">
+    <title></title>
+    
+    <!-- fonts -->
+
+    <!-- css -->
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <link rel="stylesheet" media="all" href="css/contact.css">
+</head>
+<body>
+    <!-- header -->
+
+    <div id="pageWrapper">
+        <div id="loader">
+            <div id="loaderBg" class="loader-slide">
+            <div class="load_logo"><img src="images/logo_foot.png" alt="Now Loading"></div>
+            </div>
+    </div>
+
+    <header id="siteHead">
+        <div id="pageHead">
+            <div class="pageHead_inner">
+                <div class="logo"><div><a href="./index.html"><img src="images/logo.png"></a></div></div>
+                <nav id="nav">
+                    <ul class="nav_menu">
+                        <li><a href="./index.html">ホーム</a></li>
+                        <li><a href="#about">Manual-Dockとは</a></li>
+                        <li><a href="#howto">こんな使い方ができます</a></li>
+                        <li><a href="#order">お申込みのしかた</a></li>
+                        <li><a href="./price.html">料金について</a></li>
+                        <li><a href="#document">資料ダウンロード</a></li>
+                        <li><a href="#more">Manual-Dockをもっと知る</a></li>
+                        <li><a href="./contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <div class="login">
+                    <a href="">ログイン</a>
+                </div>
+
+                <!-- ハンバーガーメニュー-->
+
+                <button class="menu-trigger menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- gNav -->
+                <nav id="gNav">
+                    <div class="gNav_inner">
+                        <ul class="nav_menu">
+                            <li><a href="./index.html">ホーム</a></li>
+                            <li><a href="#about">Manual-Dockとは</a></li>
+                            <li><a href="#howto">こんな使い方ができます</a></li>
+                            <li><a href="#order">お申込みのしかた</a></li>
+                            <li><a href="./price.html">料金について</a></li>
+                            <li><a href="#document">資料ダウンロード</a></li>
+                            <li><a href="#more">Manual-Dockをもっと知る</a></li>
+                            <li><a href="./contact.html">お問い合わせ</a></li>
+                        </ul>
+
+                        <ul class="nav_menu_com">
+                            <li><a href="#company">運営会社</a></li>
+                            <li><a href="#about">利用規約</a></li>
+                            <li><a href="./policy.html">プライバシーポリシー</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+    <main>
+        <div class="title_bg">
+            <div class="pagetitle">
+                <span>Contact</span>
+                <h1>お問い合わせ</h1>
+            </div>
+        </div>
+
+        <div class="contact_wrapper">
+            <section class="note">
+                <h2>お問い合わせ、お見積り、資料のご請求などは無料で承っております。<br />まずは、お気軽にお問い合わせください。<br class="br_sp">
+                    後ほど、担当者よりご連絡させていただきます。</h2>
+            </section>
+
+            <section class="product">
+                <h3>製品カテゴリ<span>必須</span><p>※複数選択可</p></h3>
+                <ul class="form">
+                    <li>
+                        <input type="checkbox" id="medical_product" name="medical_product">
+                        <label for="medical_product">医療機器</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="industry_product" name="industry_product">
+                        <label for="industry_product">産業機械</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="home_product" name="home_product">
+                        <label for="home_product">家電製品</label>
+                    </li>
+                    <li class="w_full">
+                        <input type="checkbox" id="else_product" name="else_product">
+                        <label for="else_product">その他製品カテゴリ：</label>
+                        <input type="text" id="else_product_text" class="input_text" name="else_product_text" size="20">
+                    </li>
+                </ul>
+            </section>
+
+            <section class="service">
+                <h3>お問い合わせサービス<span>必須</span><p>※複数選択可</p></h3>
+                <ul class="form">
+                    <li class="w_full">
+                        <input type="checkbox" id="manufacturer" name="manufacturer">
+                        <label for="manufacturer">本サービス（製品マニュアル評価サービス　ManualDock）</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="translation_en" name="translation_en">
+                        <label for="translation_en">翻訳（日英/英日）</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="translation_eu" name="translation_eu">
+                        <label for="translation_eu">多言語翻訳（EU言語）</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="translation_as" name="translation_as">
+                        <label for="translation_as">多言語翻訳（アジア言語）</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="native" name="native">
+                        <label for="native">ネイティブチェック</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="manual" name="manual">
+                        <label for="manual">マニュアル制作</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ifu" name="ifu">
+                        <label for="ifu">IFU制作</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="illust" name="illust">
+                        <label for="illust">テクニカルイラスト制作</label>
+                    </li>
+                    <li class="dtp_list">
+                        <input type="checkbox" id="dtp" name="dtp">
+                        <label for="dtp">DTP編集</label>
+                        <div class="accordion">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="framemaker" name="framemaker">
+                                    <label for="framemaker">Adobe FrameMaker</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="indesign" name="indesign">
+                                    <label for="indesign">Adobe InDesign</label>
+                                </li>
+                                <li class="else_dtp">
+                                    <input type="checkbox" id="else_dtp" name="else_dtp">
+                                    <label for="else_dtp">その他DTPソフト：</label>
+                                    <input type="text" id="else_dtp_txt" name="else_dtp_txt" size="30">
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="word" name="word">
+                                    <label for="word">MS Word</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="illusrtator" name="illusrtator">
+                                    <label for="illusrtator">Adobe Illusrtator</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="video" name="video">
+                        <label for="video">ビデオ制作</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="elearning" name="elearning">
+                        <label for="elearning">eラーニング制作</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="catalog" name="catalog">
+                        <label for="catalog">カタログ制作</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="law" name="law">
+                        <label for="law">法令規格調査</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="standard" name="standard">
+                        <label for="standard">規格適合チェック</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="document" name="document">
+                        <label for="document">技術文書作成支援</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="evaluate" name="evaluate">
+                        <label for="manual_evaluate">マニュアル評価</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="consultant" name="consultant">
+                        <label for="consultant">マニュアル品質改善コンサル</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="help" name="help">
+                        <label for="help">オンラインヘルプ制作</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="web" name="web">
+                        <label for="web">Web制作</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="print" name="print">
+                        <label for="print">印刷</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="develop" name="develop">
+                        <label for="develop">ソフト開発</label>
+                    </li>
+                    <li class="w_full">
+                        <input type="checkbox" id="icras" name="icras">
+                        <label for="icras">全社的リスク評価（i-CRAS）</label>
+                    </li>
+                    <li class="w_full">
+                        <input type="checkbox" id="else_service" name="else_service">
+                        <label for="else_service">その他サービス：</label>
+                        <input type="text" id="else_service_text" class="input_text" name="else_service_text" size="20">
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail">
+                <h3>お問い合わせ内容<span>必須</span></h3>
+                <div class="form">
+                    <textarea name="detail" rows="6" cols="100" placeholder="こちらにお問い合わせ内容を記入してください。"></textarea><br>
+                </div>
+            </section>
+
+            <section class="name">
+                <h3>お名前<span>必須</span></h3>
+                <div class="form">
+                    <input type="text" id="name" class="w_mid" name="name" size="" placeholder="例）品質　花子">
+                </div>
+            </section>
+
+
+            <section class="group">
+                <h3>会社・団体名<span>必須</span></h3>
+                <div class="form">
+                    <input type="text" id="group" name="group" size="" placeholder="例）株式会社ドキュメントハウス">
+                </div>
+            </section>
+
+
+            <section class="department">
+                <h3>部署名<span>必須</span></h3>
+                <div class="form">
+                    <input type="text" id="department" name="department" size="" placeholder="例）品質保証部">
+                </div>
+            </section>
+
+            <section class="mail">
+                <h3>メールアドレス<span>必須</span></h3>
+                <div class="form">
+                    <input type="text" id="mail" class="w_mid" name="mail" size="" placeholder="例）info@dhouse.co.jp">
+                </div>
+            </section>
+
+            <section class="phone">
+                <h3>電話番号<span>必須</span></h3>
+                <div class="form">
+                    <input type="text" id="phone" class="w_mid" name="phone" size="" placeholder="例）0120-668-030">
+                </div>
+            </section>
+
+            <section class="bring">
+                <h3>お問い合わせ経緯につきまして<p>※複数選択可</p></h3>
+                <ul class="form">
+                    <li>
+                        <input type="checkbox" id="internet" name="internet">
+                        <label for="internet">インターネット</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="introduce" name="introduce">
+                        <label for="introduce">ご紹介</label>
+                    </li>
+                    <li class="event">
+                        <input type="checkbox" id="event" name="event">
+                        <label for="event">当社からのご案内・イベント</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="bring_else" name="bring_else">
+                        <label for="bring_else">その他</label>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="agree">
+                <div class="agree_text">当社の<a href="./policy.html">「プライバシーポリシー」</a>に<br class="br_sp">ご同意の上、送信してください。</div>
+                <div class="form_agree">
+                    <div class="agree_check">
+                        <input type="checkbox" id="agree" name="agree">
+                        <label for="agree">プライバシーポリシーに同意する</label>
+                    </div>
+                    <div class="button">
+                        <a href="#">内容を確認する</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <!-- footer -->
+    <footer>
+        <!-- ナビゲーション -->
+        <div class="footer_nav_wrap">
+          <div class="footer_top">
+            <div class="footer_logo">
+                <a href="./"><img src="images/logo_foot.png"></a>
+            </div>
+            <div class="footer_nav pc">
+                <ul>
+                    <li><a href="./index.html">ホーム</a></li>
+                    <li><a href="#about">ManualDockとは</a></li>
+                    <li><a href="#howto">こんな使い方ができます</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#order">お申込みのしかた</a></li>
+                    <li><a href="./price.html">料金について</a></li>
+                    <li><a href="#document">資料ダウンロード</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#more">ManualDockをもっと知る</a></li>
+                    <li><a href="./contact.html">お問い合わせ</a></li>
+                    <li><a href="">ログイン</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_nav sp">
+                <ul>
+                    <li><a href="./index.html">ホーム</a></li>
+                    <li><a href="#about">ManualDockとは</a></li>
+                    <li><a href="#howto">こんな使い方ができます</a></li>
+                    <li><a href="#order">お申込みのしかた</a></li>
+                    <li><a href="./price.html">料金について</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#document">資料ダウンロード</a></li>
+                    <li><a href="#more">ManualDockをもっと知る</a></li>
+                    <li><a href="./contact.html">お問い合わせ</a></li>
+                    <li><a href="">ログイン</a></li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="footer_bottom">
+            <div class="company_nav">
+                <ul>
+                    <li><a href="#company">運営会社</a></li>
+                    <li><a href="#about">利用規約</a></li>
+                    <li><a href="./policy.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            <div class="copy">2022 © Document House Co., Ltd. Japan  All Right Reserved.</div>
+          </div>
+        </div>
+      </footer>
+    <!-- footer -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/contact.js"></script>
+
+
+</body>
+</html>
